@@ -1,0 +1,32 @@
+import requests
+from bs4 import BeautifulSoup
+
+def scrape_olx_vehicle(url):
+    # Do request to the page
+    response = requests.get(url)
+    # Parsing page with BeautifulSoup
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    # Import title
+    title = soup.find('h1', class_='css-r9zjja-Text').text
+    # Import Price
+    price = soup.find('h3', class_='css-okktvh-Text').text
+    # Import year and details from the description, if any
+    description = soup.find('div', class_='css-g5mtbi-Text').text
+    
+    # Dictionary to save data
+    vehicle_data = {
+        'Title': title,
+        'Price': price,
+        'Description': description
+    }
+    
+    return vehicle_data
+
+# URL target
+url = 'https://www.olx.co.id/olxmobbi/item/mercedes-benz-c300-20-amg-line-bensin-2020-hitam-iid-917375983'
+
+# Import data and show
+vehicle_data = scrape_olx_vehicle(url)
+for key, value in vehicle_data.items():
+    print(f"{key}: {value}")
