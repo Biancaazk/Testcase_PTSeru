@@ -2,7 +2,8 @@
 
 Performance Tracker-Dashboard
 
-### Folder Link : https://drive.google.com/drive/u/3/folders/1Rx2XOkQT7jCggo3cu1ZynJl-NhC-zZQV
+### Power BI File : https://drive.google.com/file/d/1v-6vZ8Nihy6KK9j23PWelrGQ5jX_sAjt/view?usp=drive_link
+### Dashboard Link : https://drive.google.com/file/d/1qyJ8HZxo3r8ve6BgwY560d8mP4BLlDlB/view?usp=drive_link
 
 ## Problem Statement
 
